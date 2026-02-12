@@ -5,8 +5,8 @@ A modern and responsive E-commerce application built with Flutter, specialized i
 ## 🖼️ Screenshots
 
 <p float="left">
-  <img src="screenshots/Screen1.png" width="45%" alt="Home Screen" />
-  <img src="screenshots/Screen2.png" width="45%" alt="Product Details" />
+  <img src="https://raw.githubusercontent.com/AhmedIraqey1/greenmart_app/refs/heads/main/screenshots/Screenshot1.png" width="45%" alt="Home Screen" />
+  <img src="https://raw.githubusercontent.com/AhmedIraqey1/greenmart_app/refs/heads/main/screenshots/Screenshot2.png" width="45%" alt="Product Details" />
 </p>
 
 > **Note:** Make sure the image paths in the `screenshots/` folder match the filenames above.
