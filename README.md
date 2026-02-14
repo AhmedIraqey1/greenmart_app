@@ -13,7 +13,7 @@ A modern and responsive E-commerce application built with Flutter, specialized i
   <img src="screenshots/screenshot6.png" width="16%" alt="Product Details" />
 </p>
 
-> **Note:** Make sure the image paths in the `screenshots/` folder match the filenames above.
+
 
 ## 🚀 Features
 
@@ -28,6 +28,7 @@ A modern and responsive E-commerce application built with Flutter, specialized i
 - **Flutter** 🐦 (Framework)
 - **Dart** 💙 (Language)
 - **Material Design 3** (UI Design)
+- pinput Pakage in OTP screen
 - **State Management:** (e.g., Provider/Bloc - *Update this if you used one*)
 
 ## 🛠️ Installation & Setup
