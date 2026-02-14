@@ -1,3 +1,33 @@
-# greenmart
+# GreenMart App 🛒🌿
 
-A new Flutter project.
+A modern and responsive E-commerce application built with Flutter, specialized in fresh products and groceries. **GreenMart** provides a seamless shopping experience with a clean and user-friendly UI.
+
+## 🖼️ Screenshots
+
+<p float="left">
+  <img src="https://raw.githubusercontent.com/AhmedIraqey1/greenmart_app/refs/heads/main/screenshots/Screenshot1.png" width="45%" alt="Home Screen" />
+  <img src="https://raw.githubusercontent.com/AhmedIraqey1/greenmart_app/refs/heads/main/screenshots/Screenshot2.png" width="45%" alt="Product Details" />
+</p>
+
+> **Note:** Make sure the image paths in the `screenshots/` folder match the filenames above.
+
+## 🚀 Features
+
+- **Product Browsing:** Explore a wide range of fresh categories.
+- **Modern UI:** Clean, green-themed design using Material 3.
+- **Cart Management:** Add, remove, and manage your grocery items easily.
+- **Responsive Design:** Optimized for various screen sizes.
+- **User-Friendly Navigation:** Smooth transitions and intuitive flow.
+
+## 📱 Technologies Used
+
+- **Flutter** 🐦 (Framework)
+- **Dart** 💙 (Language)
+- **Material Design 3** (UI Design)
+- **State Management:** (e.g., Provider/Bloc - *Update this if you used one*)
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/AhmedIraqey1/greenmart_app.git](https://github.com/AhmedIraqey1/greenmart_app.git)
