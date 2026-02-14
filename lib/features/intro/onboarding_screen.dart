@@ -71,6 +71,9 @@ class OnBoarding extends StatelessWidget {
                       pushReplacementTo(context, LoginScreen());
                     },
                     text: 'Get Started',
+                    height: 58,
+                    width: 319,
+
                   ),
                   SizedBox(height: 60),
                 ],

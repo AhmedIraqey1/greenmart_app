@@ -18,6 +18,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        
         scaffoldBackgroundColor: AppColors.background,
         fontFamily: AppFonts.poppins,
         colorScheme: ColorScheme.fromSeed(
@@ -36,37 +37,37 @@ class MainApp extends StatelessWidget {
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
-           fillColor: AppColors.iconsColor.withOpacity(0.1),
-        filled: true,
-        hintStyle: TextStyles.body,
-        // prefixIcon: Icon(Icons.email, color: AppColors.iconsColor),
-        // suffixIcon: Icon(
-        //   Icons.check_circle,
-        //   color: AppColors.primary,
-        // ),
-        // suffixText: '@gmail.com',
-        // suffixStyle: TextStyles.caption.copyWith(color: Colors.green),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
-        ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide.none,
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
-          borderSide: BorderSide(color: AppColors.primary),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.red),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.red),
-        ),
+          fillColor: AppColors.iconsColor.withOpacity(0.1),
+          filled: true,
+          hintStyle: TextStyles.body,
+          // prefixIcon: Icon(Icons.email, color: AppColors.iconsColor),
+          // suffixIcon: Icon(
+          //   Icons.check_circle,
+          //   color: AppColors.primary,
+          // ),
+          // suffixText: '@gmail.com',
+          // suffixStyle: TextStyles.caption.copyWith(color: Colors.green),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide.none,
           ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide.none,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20),
+            borderSide: BorderSide(color: AppColors.primary),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide(color: Colors.red),
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide(color: Colors.red),
+          ),
+        ),
       ),
       builder: (context, child) {
         return SafeArea(

@@ -13,7 +13,7 @@ abstract class AppImages {
   static const String oils = 'assets/images/oils.png';
   static const String paper = 'assets/images/paper.png';
   static const String pepsi = 'assets/images/pepsi.png';
-  static const String soda = 'assets/images/.png';
+  static const String soda = 'assets/images/soda.png';
   static const String sprite = 'assets/images/sprite.png';
   static const String vegtables = 'assets/images/vegtables.png';
 }

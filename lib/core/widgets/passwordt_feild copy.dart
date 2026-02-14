@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:greenmart/core/styles/colors.dart';
+import 'package:greenmart/core/functions/Validations.dart';
 
 class PasswordFeild extends StatefulWidget {
   const PasswordFeild({super.key, required this.hintText});
@@ -14,11 +14,16 @@ class _PasswordFeildState extends State<PasswordFeild> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: TextInputType.visiblePassword,
       obscureText: obscureText,
+      onTapOutside: (event) {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       decoration: InputDecoration(
         hintText: widget.hintText,
+
         suffixIcon: IconButton(
-          icon: Icon(Icons.remove_red_eye, color: AppColors.iconsColor),
+          // icon: Icon(Icons.remove_red_eye, color: AppColors.iconsColor),
           onPressed: () {
             //Handle password visibility toggle
             setState(() {
@@ -26,8 +31,24 @@ class _PasswordFeildState extends State<PasswordFeild> {
               obscureText = !obscureText;
             });
           },
+          icon: obscureText
+              ? const Icon(Icons.visibility_off)
+              : const Icon(Icons.remove_red_eye),
         ),
       ),
+      validator: (input) {
+        if (input == null || input.isEmpty) {
+          return 'Please enter your password';
+        }
+
+        // هنا بنادي على الفانكشن اللي إنت عاملها في الملف الخارجي
+        if (!isPassword(input)) {
+          return 'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل،\nوتتضمن حرفاً كبيراً، رقماً، ورمزاً خاصاً (@#!*?&)';
+        }
+
+        // مهم جداً: لو الباسورد صح لازم نرجع null عشان الـ Validation ينجح
+        return null;
+      },
     );
   }
 }
