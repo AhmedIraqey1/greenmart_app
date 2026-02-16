@@ -3,10 +3,10 @@ import 'package:greenmart/core/constants/app_images.dart';
 class ProductModel {
   final String id;
   final String name;
-  final String price; // السعر يفضل يكون double عشان الحسابات
+  final String price; 
   final String weight;
   final String image;
-  // عشان التصفية (Filtering)
+  
 
   ProductModel({
     required this.id,
@@ -17,7 +17,7 @@ class ProductModel {
   });
 }
 
-// (اختياري حالياً) ده هيساعدك جداً لما تربط بـ Database
+
 List<ProductModel> offers = [
   ProductModel(
     id: '2',

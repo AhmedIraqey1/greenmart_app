@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:greenmart/core/constants/app_icons.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/widgets/custom_svg_picture.dart';
+import 'package:greenmart/features/main/cart/screens/cart_screen.dart';
+import 'package:greenmart/features/main/explore/screens/explore_screen.dart';
 import 'package:greenmart/features/main/favorite/screens/favorites_screen.dart';
 import 'package:greenmart/features/main/shop/screens/shop_screen.dart';
 import 'package:greenmart/features/main/account/screens/user_screen.dart';
@@ -18,8 +20,8 @@ class _MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
     Center(child: ShopScreen()),
-    Center(child: Text('Explore')),
-    Center(child: Text('cart')),
+    Center(child: ExploreScreen()),
+    Center(child: CartScreen()),
     Center(child: FavoritesScreen()),
     Center(child: UserScreen()),
   ];

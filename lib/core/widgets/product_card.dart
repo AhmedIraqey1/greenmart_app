@@ -15,6 +15,11 @@ class ProductCard extends StatelessWidget {
 
       margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
+        border: Border.all(
+          color: const Color.fromARGB(111, 128, 128, 128),
+          style: BorderStyle.solid,
+          width: .9,
+        ),
         color: AppColors.background,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
@@ -29,13 +34,14 @@ class ProductCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
 
           children: [
             Align(
               alignment: Alignment.center,
-              child: Expanded(child: Image.asset(model.image)),
+              child: Image.asset(model.image, height: 108),
             ),
             SizedBox(height: 20),
             Text(model.name, style: TextStyles.button),
@@ -48,14 +54,17 @@ class ProductCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(model.price, style: TextStyles.button),
-                Container(
-                  width: 41,
-                  height: 41,
-                  decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(10),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 41,
+                    height: 41,
+                    decoration: BoxDecoration(
+                      color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(13),
+                    ),
+                    child: Icon(Icons.add, color: AppColors.background),
                   ),
-                  child: Icon(Icons.add, color: AppColors.background),
                 ),
               ],
             ),

@@ -3,6 +3,7 @@ import 'package:greenmart/core/functions/navigations.dart';
 import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/widgets/product_card.dart';
 import 'package:greenmart/core/widgets/text_input_feild.dart';
+import 'package:greenmart/features/main/search/widgets/filtered_grid_view.dart';
 import 'package:greenmart/features/main/shop/data/product_model.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -14,7 +15,8 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   final focusNode = FocusNode();
-  @override
+  String searchKey = '';
+
   @override
   void initState() {
     super.initState();
@@ -28,7 +30,6 @@ class _SearchScreenState extends State<SearchScreen> {
         bottom: PreferredSize(preferredSize: Size(400, 5), child: Container()),
         backgroundColor: AppColors.background,
         leading: IconButton(
-          focusNode: focusNode,
           onPressed: () {
             pop(context);
           },
@@ -41,26 +42,30 @@ class _SearchScreenState extends State<SearchScreen> {
           child: Material(
             color: Colors.transparent,
             child: TextInputFeild(
+              focusNode: focusNode,
               hintText: 'Search Store',
               icon: Icon(Icons.search),
+              onChanged: (value) {
+                setState(() {
+                  searchKey = value;
+                });
+              },
             ),
           ),
         ),
         actions: [SizedBox(width: 20)],
       ),
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          crossAxisSpacing: 0,
-          mainAxisSpacing: 20,
-          // childAspectRatio: .78,
-          mainAxisExtent: 260,
-        ),
-        itemBuilder: (context, index) {
-          return ProductCard(model: offers[index]);
-        },
-        itemCount: offers.length,
-      ),
+      body: FilteredGridView(products: getProductsByName(searchKey)),
     );
   }
+}
+
+List<ProductModel> getProductsByName(String searchKey) {
+  List<ProductModel> filteredProducts = [];
+  for (var product in offers) {
+    if (product.name.toLowerCase().contains(searchKey.toLowerCase())) {
+      filteredProducts.add(product);
+    }
+  }
+  return filteredProducts;
 }

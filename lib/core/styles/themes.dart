@@ -38,11 +38,11 @@ abstract class AppThemes {
       // suffixText: '@gmail.com',
       // suffixStyle: TextStyles.caption.copyWith(color: Colors.green),
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(20),
         borderSide: BorderSide.none,
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(20),
         borderSide: BorderSide.none,
       ),
       focusedBorder: OutlineInputBorder(
