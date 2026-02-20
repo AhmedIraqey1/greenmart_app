@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:greenmart/core/constants/app_images.dart';
+import 'package:greenmart/core/functions/navigations.dart';
+import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/core/widgets/main_button.dart';
+import 'package:greenmart/features/main/cart/widgets/modal_buttom_sheet.dart';
 import 'package:greenmart/features/main/cart/widgets/vertical_product_cart_card.dart';
 import 'package:greenmart/main.dart';
 
@@ -66,7 +69,9 @@ class _CartScreenState extends State<CartScreen> {
                 SizedBox(height: 10),
                 MainButton(
                   text: 'Go to Checkout',
-                  onPressed: () {},
+                  onPressed: () {
+                    modalBottomSheet(context);
+                  },
                   height: 60,
                   width: double.infinity,
                 ),
@@ -78,4 +83,5 @@ class _CartScreenState extends State<CartScreen> {
       ),
     );
   }
-}
+
+ }

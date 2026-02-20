@@ -6,6 +6,8 @@ import 'package:greenmart/core/styles/colors.dart';
 import 'package:greenmart/core/styles/text_style.dart';
 import 'package:greenmart/core/widgets/counter.dart';
 import 'package:greenmart/core/widgets/main_button.dart';
+import 'package:greenmart/features/main/cart/screens/cart_screen.dart';
+import 'package:greenmart/features/main/favorite/screens/favorites_screen.dart';
 import 'package:greenmart/features/main/shop/data/product_model.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -76,7 +78,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         ),
 
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            pushTo(context, FavoritesScreen());
+                          },
                           icon: Icon(Icons.favorite_border),
                         ),
                       ],
@@ -163,18 +167,16 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           ),
         ),
       ),
-      bottomNavigationBar:
-      
-       Padding(
-        
+      bottomNavigationBar: Padding(
         padding: const EdgeInsets.fromLTRB(24.0, 0, 24.0, 24.0),
         child: MainButton(
           text: 'Add To Cart',
-          onPressed: () {},
+          onPressed: () {
+            pushTo(context, CartScreen());
+          },
           height: 60,
           width: double.infinity,
         ),
-        
       ),
     );
   }
