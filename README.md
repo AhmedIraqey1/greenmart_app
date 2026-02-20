@@ -20,6 +20,8 @@ A modern and responsive E-commerce application built with Flutter, specialized i
   <img src="screenshots/Screenshot13.png" width="16%" alt="Product Details" />
   <img src="screenshots/Screenshot14.png" width="16%" alt="Product Details" />
   <img src="screenshots/Screenshot15.png" width="16%" alt="Product Details" />
+  <img src="screenshots/Screenshot16.png" width="16%" alt="Product Details" />
+  <img src="screenshots/Screenshot17.png" width="16%" alt="Product Details" />
 </p>
 
 
